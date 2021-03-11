@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start-with-local-snowpack": "node ../snowpack/snowpack/index.bin.js dev --verbose --reload",
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "web-test-runner \"src/**/*.test.tsx\"",

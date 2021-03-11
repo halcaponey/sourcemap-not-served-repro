@@ -1,25 +1,9 @@
-# New Project
+# sourcemap-not-served-repro
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+This is repro for this [github issue](https://github.com/snowpackjs/snowpack/issues/1478).
 
-## Available Scripts
+Uses `app-template-react-typescript`.
 
-### npm start
+`start` script (using snowpack 3.0.13) will trigger the bug: original files are served instead of their sourcemap
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" to your `snowpack.config.js` config file.
-
-### npm test
-
-Launches the application test runner.
-Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+`start-with-local-snowpack` script (using a local snowpack: branch main, HEAD 906f25) won't trigger the bug
